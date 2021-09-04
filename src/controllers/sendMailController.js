@@ -30,8 +30,8 @@ exports.sendMail = async function (req, res) {
                 <b>Email:</b> ${req.body.email}
                 <br><br>
                 <b>Mensaje:</b> ${req.body.mensaje} `, // html body
-    });
-    res.send("Correo enviado satisfactoriamente");
+    }).then(res.send("Correo enviado satisfactoriamente"));
+    
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 
